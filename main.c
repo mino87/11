@@ -5,24 +5,20 @@
 
 int main(void)
 {
-	int i;
-	int sum;
-	int grade[5];
+	char *pc;
+	int *pi;
+	double *pd;
 	
-	for (i=0;i<5;i++)
-	{
-		printf("grade[%i]=",i);
-		scanf("%d",&grade[i]);
-	}
+	pc=(char*)10000;
+	pi=(int*)10000;
+	pd=(double*)10000;
 	
+	printf("증가전 :pc %d, pi =%d, pd=%d\n",pc,pi,pd);
 	
-    
-	for (i=0;i<5;i++)
-	{
-		printf("[%i]=%i\n",i,*(grade+i));
-		
-		sum += *(grade+i);
-	}
-	printf("%i", sum/5);	
-		
+	pc++;
+	pi++;
+	pd++;
+	printf("증가후:pc =%d,pi=%d,pd=%d\n",pc,pi,pd);
+	
+	return 0;
 }
